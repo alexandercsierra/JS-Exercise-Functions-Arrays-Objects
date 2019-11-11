@@ -115,8 +115,8 @@ var inventory = [
   { id: 13, car_make: "Chevrolet", car_model: "Cavalier", car_year: 1997 },
   { id: 14, car_make: "Dodge", car_model: "Ram Van 1500", car_year: 1999 }
   /// ... Truncated
-]
-*/
+]*/
+
 /**
   * ### Example Array Challenge:
   *
@@ -153,7 +153,6 @@ function get3rdCar(inventory) {
 function getCarInfoByIndex(inventory, index) {
   return "This is a " + inventory[index].car_make + " " + inventory[index].car_model;
 }
-
 /**
  * ### Challenge `getLastCarInfo`
  *
@@ -183,8 +182,11 @@ function getLastCarInfo(inventory) {
  * it will return `This is a Lincoln Navigator`.
 */
 function getCarInfoById(inventory, id) {
-  /* code here */
+  const car = inventory[id-1];
+  return "This is a " + car.car_make + " " + car.car_model + ".";
 }
+
+// getCarInfoById(inventory, 1);
 
 /**
  * ### Challenge `sortCarInventory`
